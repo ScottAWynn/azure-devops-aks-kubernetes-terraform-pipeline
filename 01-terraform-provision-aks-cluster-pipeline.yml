@@ -25,12 +25,11 @@ stages:
         displayName: Terraform Install
         inputs:
           terraformVersion: 'latest'
-      - task: JasonBJohnson.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformCLI@0
-        displayName: Terraform Init
+      - task: TerraformCLI@0
         inputs:
           command: 'init'
           workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-manifests'
-          backendAzureRmUseEntraIdForAuthentication: false
+          backendType: 'azurerm'
           backendServiceArm: 'Visual Studio Enterprise(135aa0f0-03ce-4848-be2f-9d7691ad581b)'
           backendAzureRmResourceGroupName: 'terraform-storage-rg'
           backendAzureRmStorageAccountName: 'terraformstatewynnhome'
