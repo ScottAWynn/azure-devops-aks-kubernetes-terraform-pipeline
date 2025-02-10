@@ -25,7 +25,7 @@ stages:
         displayName: Terraform Install
         inputs:
           terraformVersion: 'latest'
-      - task: JasonBJohnson.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@0
+      - task: JasonBJohnson.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformCLI@0
         displayName: Terraform Init
         inputs:
           command: 'init'
