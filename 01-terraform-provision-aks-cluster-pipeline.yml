@@ -30,7 +30,7 @@ stages:
           command: 'init'
           workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-manifests'
           backendType: 'azurerm'
-          backendServiceArm: 'Visual Studio Enterprise(135aa0f0-03ce-4848-be2f-9d7691ad581b)'
+          backendServiceArm: 'terraform-aks-azurerm-svc-con'
           backendAzureRmResourceGroupName: 'terraform-storage-rg'
           backendAzureRmStorageAccountName: 'terraformstatewynnhome'
           backendAzureRmContainerName: 'tfstatefiles'
